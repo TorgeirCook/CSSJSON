@@ -10,7 +10,7 @@ export const strNode = function (
   for (let i = 0; i <= depth; ++i) {
     cssString += '  ';
   }
-  cssString += name + ' {\n';
+  cssString += name.replace(/&&&\d+&&&/, '') + ' {\n';
   cssString += toCSS(value, depth + 1);
   for (let i = 0; i <= depth; ++i) {
     cssString += '  ';
